@@ -919,8 +919,8 @@ static void bootstrap_attr_stack(struct index_state *istate,
 	}
 
 	/* home directory */
-	if (git_attr_global_file()) {
-		e = read_attr_from_file(git_attr_global_file(), flags);
+	if (repo_settings_get_attributesfile_path(istate->repo)) {
+		e = read_attr_from_file(repo_settings_get_attributesfile_path(istate->repo), flags);
 		push_stack(stack, e, NULL, 0);
 	}
 
