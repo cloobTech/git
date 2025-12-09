@@ -879,14 +879,6 @@ const char *git_attr_system_file(void)
 	return system_wide;
 }
 
-const char *git_attr_global_file(void)
-{
-	if (!git_attributes_file)
-		git_attributes_file = xdg_config_home("attributes");
-
-	return git_attributes_file;
-}
-
 int git_attr_system_is_enabled(void)
 {
 	return !git_env_bool("GIT_ATTR_NOSYSTEM", 0);
