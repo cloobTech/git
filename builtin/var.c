@@ -19,6 +19,8 @@
 #include "strbuf.h"
 #include "run-command.h"
 
+
+
 static const char var_usage[] = "git var (-l | <variable>)";
 
 static char *committer(int ident_flag)
