@@ -262,7 +262,7 @@ static int read_and_verify_repository_format(struct repository_format *format,
  */
 int repo_init(struct repository *repo,
 	      const char *gitdir,
-	      const char *worktree)
+	      const char *worktree, char *hey)
 {
 	struct repository_format format = REPOSITORY_FORMAT_INIT;
 	memset(repo, 0, sizeof(*repo));
